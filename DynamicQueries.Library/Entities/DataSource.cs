@@ -1,19 +1,17 @@
-﻿using DynamicQueries.Library.ValueObjects;
-using System.Reflection;
-namespace DynamicQueries.Library.Entities;
+﻿namespace DynamicQueries.Library.Entities;
 
-public class DataSource(string Name, string Description, Type ElementType, IQueryable Queryable,
-                        DataSourcePropertyInfo[] Properties)
+public class DataSource(string _Name, string _Description, Type _ElementType, IQueryable _Queryable,
+                        DataSourcePropertyInfo[] _Properties)
 {
-    public string Name => Name;
-    public string Description => Description;
-    public Type ElementType => ElementType;
-    public IQueryable Queryable => Queryable;
-    public DataSourcePropertyInfo[] Properties => Properties;
+    public string Name => _Name;
+    public string Description => _Description;
+    public Type ElementType => _ElementType;
+    public IQueryable Queryable => _Queryable;
+    public DataSourcePropertyInfo[] Properties => _Properties;
 
     public PropertyInfo GetPropertyInfo(string Name) =>
-        ElementType.GetProperty(Name, BlindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
-    
+        ElementType.GetProperty(Name, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+
     public PropertyInfo[] GetAllPropertyInfos() =>
         [.. Properties.Select(p => GetPropertyInfo(p.Name))];
 }

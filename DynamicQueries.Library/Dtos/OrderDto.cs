@@ -1,7 +1,7 @@
 ﻿namespace DynamicQueries.Library.Dtos;
 
-public class OrderDto(string FieldName, string OrderType)
+public class OrderDto(string _FieldName, string _OrderType)
 {
-    public string FieldName => FieldName;
-    public string OrderType => OrderType;
+    public string FieldName => _FieldName;
+    public string OrderType => _OrderType;
 }

@@ -1,6 +1,12 @@
-﻿namespace DynamicQueries.Library;
-
-public class GlobalUsings
-{
-
-}
+﻿global using DynamicQueries.Library.Dtos;
+global using DynamicQueries.Library.Result;
+global using System.Dynamic;
+global using DynamicQueries.Library.ValueObjects;
+global using System.Reflection;
+global using DynamicQueries.Library.Internals;
+global using DynamicQueries.Library.Interfaces;
+global using DynamicQueries.Library.Entities;
+global using DynamicQueries.Library.Extensions;
+global using DynamicQueries.Library.Extensions.DataSourceExtensions;
+global using DynamicQueries.Library.Helpers;
+global using System.Linq.Expressions;

@@ -1,9 +1,9 @@
 ﻿namespace DynamicQueries.Library.Dtos;
 
-public class FilterDto(string FieldName, string Operation, string Value, string JoinWithNext)
+public class FilterDto(string _FieldName, string _Operation, string _Value, string _JoinWithNext)
 {
-    public string FieldName => FieldName;
-    public string Operation => Operation;
-    public string Value => Value;
-    public string JoinWithNext => JoinWithNext;
+    public string FieldName => _FieldName;
+    public string Operation => _Operation;
+    public string Value => _Value;
+    public string JoinWithNext => _JoinWithNext;
 }
